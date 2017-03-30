@@ -1,0 +1,25 @@
+{
+  "name": "rxjs-autocomplete",
+  "version": "1.0.0",
+  "description": "autocomplete with rxjs observable calling github-users",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.comzualexander/rxjs-autocomplete"
+  },
+  "keywords": [
+    "autocomplete"
+  ],
+  "author": "az",
+  "license": "ISC",
+  "dependencies": {
+    "rxjs": "^5.2.0"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-preset-latest": "^6.24.0"
+  }
+}
