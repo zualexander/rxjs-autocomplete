@@ -1,4 +1,4 @@
-let input = $('#input');
+flet input = $('#input');
 input.bin('keyup', ()=>{
     let val = input.val();
     if(val.length>=3){

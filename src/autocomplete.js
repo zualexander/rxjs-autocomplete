@@ -7,13 +7,14 @@ export const activateAutoComplete = () => {
     const keyboard$ = Observable.fromEvent($input, 'keyup')
         .map(x => x.target.value)
         .debounceTime(200)
-        .filter(text => text.length > 2)
-        .distinctUntilChanged();
+        .filter(text => text.length > 3)
+        .distinctUntilChanged()
+        .switchMap((val) => createRequestObservable(val));
 
     keyboard$.subscribe((value) => {
-        const request$ = createRequestObservable(value);
-        const requestSubscribe = request$.subscribe(createAutocomplete, handleError);
-    });
+            createAutocomplete(value);
+        },
+        (err) => handleError(err));
 
     function createRequestObservable(queryString) {
         return Observable.ajax(`https://api.github.com/search/users?q=${queryString}`)

@@ -1,7 +1,7 @@
 import {activateAutoComplete} from './autocomplete';
 
-//activateAutoComplete();
-const connection = new WebSocket('ws://html5rocks.websocket.org/echo', ['soap', 'xmpp']);
+activateAutoComplete();
+/*const connection = new WebSocket('ws://html5rocks.websocket.org/echo', ['soap', 'xmpp']);
 
 
 // When the connection is open, send some data to the server
@@ -17,4 +17,4 @@ connection.onerror = function (error) {
 // Log messages from the server
 connection.onmessage = function (e) {
     console.log('Server: ' + e.data);
-};
+};*/
